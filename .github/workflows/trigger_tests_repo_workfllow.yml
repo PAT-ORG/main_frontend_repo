@@ -1,4 +1,4 @@
-name: Trigger workflow in tests repo with workflow read and write 
+name: Trigger workflow in tests repo with Action read
 on:
     push:
         branches: [ main ]
