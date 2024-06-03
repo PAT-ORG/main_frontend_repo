@@ -1,4 +1,4 @@
-name: Trigger workflow in tests repo with Action read
+name: Trigger workflow in tests repo 
 on:
     push:
         branches: [ main ]
@@ -8,6 +8,7 @@ jobs:
     trigger:
         runs-on: ubuntu-latest
         steps:
+            # with actions and code read only
             - name: Repository Dispatch 
               run: |
                 curl -X POST https://api.github.com/repos/PAT-ORG/test1/dispatches \
