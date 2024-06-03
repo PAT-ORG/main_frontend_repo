@@ -8,7 +8,7 @@ jobs:
     trigger:
         runs-on: ubuntu-latest
         steps:
-            # with code read and write
+            # with code read and write after google chat addition in test1
             - name: Repository Dispatch 
               run: |
                 curl -X POST https://api.github.com/repos/PAT-ORG/test1/dispatches \
