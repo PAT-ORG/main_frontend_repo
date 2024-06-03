@@ -1,0 +1,17 @@
+name: Trigger workflow in tests repo
+on:
+    push:
+        branches: [ main ]
+
+       
+jobs:
+    trigger:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Repository Dispatch
+              run: |
+                curl -X POST https://api.github.com/repos/PAT-ORG/test1/dispatches \
+                -H 'Accept: application/vnd.github+json' \
+                -H 'Authorization: token ${{ secrets.TEST_TRIGGER_IN_TEST1 }}' \
+                -d '{"event_type": "call"}'
+  
