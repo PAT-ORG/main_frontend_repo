@@ -8,7 +8,7 @@ jobs:
     trigger:
         runs-on: ubuntu-latest
         steps:
-            # with code read, workflow read and write
+            # with code read and write
             - name: Repository Dispatch 
               run: |
                 curl -X POST https://api.github.com/repos/PAT-ORG/test1/dispatches \
